@@ -14,17 +14,17 @@ class IShipping(Interface):
     """
     sid = Attribute(u"Unique shipping method id. Shipping method adapter is "
                     u"also registered under this name.")
-    
+
     label = Attribute(u"Shipping method label")
-    
+
     available = Attribute(u"Flag whether shipping method is available in "
                           u"recent payment cycle.")
-    
+
     default = Attribute(u"Flag whether this shipping method is default.")
-    
+
     def calculate(self, items):
         """Calculate shipping costs.
-        
+
         @param items: items to calculate shipping costs.
         @return: shipping costs as float.
         """
